@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+rsvg-convert \
+  /usr/share/backgrounds/funlinux/funcomputer-logo.svg \
+  -w 1920 -h 1080 \
+  -o /usr/share/backgrounds/funlinux/funcomputer-logo.png
+
+rsvg-convert \
+  /usr/share/plymouth/themes/funlinux/funcomputer-logo.svg \
+  -w 800 -h 355 \
+  -o /usr/share/plymouth/themes/funlinux/funcomputer-logo.png
+
+plymouth-set-default-theme -R funlinux || true

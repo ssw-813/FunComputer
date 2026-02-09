@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=FunLinux
+Description=FunLinux boot splash with FunComputer logo
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/funlinux
+ScriptFile=/usr/share/plymouth/themes/funlinux/funlinux.script

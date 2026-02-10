@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=FunSystem
+Description=FunSystem boot animation theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/funsystem
+ScriptFile=/usr/share/plymouth/themes/funsystem/funsystem.script

@@ -129,6 +129,23 @@
                     </a>
                 </div>
 
+                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-900 hover:border-sky-500/40 transition flex flex-col justify-between group relative overflow-hidden shadow-xl">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-sky-500/5 rounded-full blur-xl"></div>
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="text-2xl font-mono text-sky-400">☁️ cloud_x</div>
+                            <span class="text-xs font-bold bg-sky-500/10 text-sky-400 px-2.5 py-1 rounded-md uppercase border border-sky-500/20 tracking-wider">Almacenamiento</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">CloudX</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Servicio de almacenamiento en la nube ultraligero. Sube, gestiona y comparte archivos de forma segura con una velocidad de transferencia optimizada al máximo.
+                        </p>
+                    </div>
+                    <a href="https://cloudxapp.base44.app" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-sky-500 hover:text-white border border-slate-800 text-sky-400 text-center font-bold py-3 rounded-xl transition text-sm">
+                        Abrir CloudX →
+                    </a>
+                </div>
+
                 <div class="bg-slate-950 p-8 rounded-2xl border border-slate-900 hover:border-yellow-400/40 transition flex flex-col justify-between group relative overflow-hidden shadow-xl">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-yellow-500/5 rounded-full blur-xl"></div>
                     <div>
@@ -146,7 +163,7 @@
                     </a>
                 </div>
 
-                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-900 hover:border-sky-500/40 transition flex flex-col justify-between group relative overflow-hidden shadow-xl md:col-span-2 lg:col-span-2">
+                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-900 hover:border-sky-500/40 transition flex flex-col justify-between group relative overflow-hidden shadow-xl">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-sky-500/5 rounded-full blur-xl"></div>
                     <div>
                         <div class="flex justify-between items-start mb-6">
@@ -155,10 +172,10 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white">xsearch</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Motor de indexación masiva y raspado de datos. Encuentra cadenas de texto, configuraciones específicas o logs pesados en bases de datos masivas en milisegundos.
+                            Motor de indexación masiva y raspado de datos. Encuentra cadenas de texto, configuraciones específicas o logs pesados en bases de datos en milisegundos.
                         </p>
                     </div>
-                    <a href="https://xsearch.base44.app" target="_blank" rel="noopener noreferrer" class="w-full lg:w-1/3 bg-slate-900 hover:bg-sky-500 hover:text-white border border-slate-800 text-sky-400 text-center font-bold py-3 rounded-xl transition text-sm self-start">
+                    <a href="https://xsearch.base44.app" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-sky-500 hover:text-white border border-slate-800 text-sky-400 text-center font-bold py-3 rounded-xl transition text-sm">
                         Abrir xsearch →
                     </a>
                 </div>
@@ -211,14 +228,12 @@
 
     <script>
         function enviarPropuesta(event) {
-            event.preventDefault(); // Evita que la página se recargue
+            event.preventDefault();
             
-            // Extraer valores del formulario
             const nombre = document.getElementById('form-nombre').value;
             const correo = document.getElementById('form-correo').value;
             const mensaje = document.getElementById('form-mensaje').value;
             
-            // Configurar los parámetros del correo
             const emailDestino = 'alvarosanjuandominguez813@gmail.com';
             const asunto = encodeURIComponent(`[funcomputer] Nueva propuesta de software de ${nombre}`);
             
@@ -231,7 +246,9 @@
                 `--- \nFin del mensaje enviado automáticamente.`
             );
             
-            // Redirigir al cliente de correo del usuario con el mail estructurado
             window.location.href = `mailto:${emailDestino}?subject=${asunto}&body=${cuerpo}`;
         }
     </script>
+
+</body>
+</html>

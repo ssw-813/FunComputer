@@ -1,0 +1,10 @@
+# Base desktop (Xubuntu-like)
+xfce4
+xfce4-goodies
+lightdm
+xubuntu-default-settings
+xubuntu-icon-theme
+xubuntu-wallpapers
+plymouth
+plymouth-themes
+librsvg2-bin

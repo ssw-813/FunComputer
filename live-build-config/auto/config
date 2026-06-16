@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+lb config noauto \
+  --mode ubuntu \
+  --distribution noble \
+  --archive-areas "main restricted universe multiverse" \
+  --debian-installer live \
+  --binary-images iso-hybrid \
+  --iso-application "FunLinux" \
+  --iso-publisher "FunComputer Inc" \
+  --iso-volume "FUNLINUX" \
+  --bootappend-live "boot=live components splash quiet"

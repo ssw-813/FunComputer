@@ -1,0 +1,23 @@
+# Base desktop
+xfce4
+xfce4-goodies
+lightdm
+network-manager
+sudo
+
+# Requested applications
+firefox-esr
+thunderbird
+libreoffice
+
+# Drivers / firmware
+firmware-linux
+firmware-linux-nonfree
+firmware-realtek
+firmware-iwlwifi
+mesa-vulkan-drivers
+
+# Boot animation stack
+plymouth
+plymouth-label
+plymouth-themes

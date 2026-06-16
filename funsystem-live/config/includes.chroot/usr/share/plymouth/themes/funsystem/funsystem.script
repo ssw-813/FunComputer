@@ -1,0 +1,17 @@
+logo = Image("logo.svg");
+sprite = Sprite(logo);
+
+screen_w = Window.GetWidth();
+screen_h = Window.GetHeight();
+logo_w = logo.GetWidth();
+logo_h = logo.GetHeight();
+
+sprite.SetX((screen_w - logo_w) / 2);
+sprite.SetY((screen_h - logo_h) / 2);
+
+fun throbber_callback () {
+  opacity = 0.60 + 0.40 * Math.Sin (Plymouth.GetTime() * 2.2);
+  sprite.SetOpacity(opacity);
+}
+
+Plymouth.SetRefreshFunction (throbber_callback);

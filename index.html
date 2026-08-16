@@ -1,144 +1,601 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="FUNCOMPUTER Labs Inc. — tecnología aplicada, investigación y productos digitales." />
-    <title>FUNCOMPUTER Labs Inc. — Tecnología con propósito</title>
-    <link rel="icon" type="image/png" href="assets/fclogo-mark.png" />
-    <link rel="apple-touch-icon" href="assets/fclogo-mark.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      :root{--ink:#05030d;--ink-soft:#0b0720;--paper:#f4f0ff;--mist:#bbb4d6;--acid:#e5ff3d;--cyan:#35e7ff;--line:rgba(155,103,255,.32)}
-      body{background:#05030d}
-      .brand-logo{width:32px;height:32px;object-fit:contain;border-radius:8px;filter:drop-shadow(0 0 9px rgba(53,231,255,.7))}
-      .hero{background:radial-gradient(circle at 77% 30%,#31206d 0,transparent 31%),radial-gradient(circle at 25% 80%,#003e54 0,transparent 28%),linear-gradient(125deg,#05030d 15%,#0a0620 65%,#09052d)}
-      .hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(rgba(53,231,255,.36) 1px,transparent 1px),linear-gradient(90deg,rgba(53,231,255,.36) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
-      .hero-copy,.signal-field{z-index:1}.core{background:radial-gradient(circle at 30% 30%,#52f2ff,#5532ba 48%,#130b35 74%);box-shadow:0 0 32px #35e7ff99,0 0 96px #9b67ff55}.core img{width:74%;height:74%;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 0 12px rgba(53,231,255,.7))}
-      .labs{background:#08051a}.lab-card:hover{background:#171034}.contact{background:#0d0830}.contact-glow{background:#9b67ff}.button-primary{background:linear-gradient(105deg,#35e7ff,#9b67ff);color:#05030d}.project-image-one{background:radial-gradient(circle at center,#5e38bb 0,#1e1450 32%,#08051c 70%)}.project-image-two{background:linear-gradient(135deg,#6f2e9e,#170d42 55%,#071727)}.project-image-three{background:linear-gradient(135deg,#075c70,#24124c 60%,#07091e)}
-      .contact-options{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:25px}.contact-options a{font:700 12px "DM Mono",monospace;letter-spacing:.06em;color:var(--paper);text-decoration:none;padding:13px 16px;border:1px solid var(--line);background:rgba(5,3,13,.3)}.contact-options a:hover{border-color:var(--cyan);color:var(--cyan)}
-      .account-button{appearance:none;background:transparent;color:var(--paper);border:1px solid var(--line);padding:10px 14px;font:700 10px "DM Mono",monospace;letter-spacing:.08em;cursor:pointer}.account-button:hover{color:var(--cyan);border-color:var(--cyan)}.account-button.is-signed-in{border-color:var(--acid);color:var(--acid)}
-      .login-dialog{border:1px solid rgba(53,231,255,.55);background:#09051b;color:var(--paper);width:min(92vw,420px);padding:0;box-shadow:0 0 0 1px #9b67ff44,0 25px 90px #000b}.login-dialog::backdrop{background:#03020acc;backdrop-filter:blur(7px)}.login-panel{padding:32px}.login-panel h2{font-size:34px;margin:9px 0 10px;letter-spacing:-.06em}.login-panel p{color:var(--mist);font-size:13px;line-height:1.6}.login-close{position:absolute;right:14px;top:12px;background:none;border:0;color:var(--paper);font-size:23px;cursor:pointer}.login-form{display:grid;gap:15px;margin-top:25px}.login-form label{display:grid;gap:7px;font:10px "DM Mono",monospace;letter-spacing:.09em}.login-form input{background:#100a2a;border:1px solid var(--line);color:var(--paper);padding:13px;font:14px Manrope,sans-serif}.login-form input:focus{outline:1px solid var(--cyan);border-color:var(--cyan)}.login-submit{border:0;padding:14px;background:linear-gradient(105deg,#35e7ff,#9b67ff);color:#05030d;font-weight:800;cursor:pointer}.login-status{min-height:20px;margin:2px 0 0;font:11px "DM Mono",monospace}.project-cat3{cursor:pointer}.project-cat3:focus{outline:2px solid var(--cyan);outline-offset:5px}
-    </style>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Saltar al contenido</a>
-    <div class="noise" aria-hidden="true"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FUNCOMPUTER Labs Inc. — tecnología, software, hardware e innovación." />
+  <title>FUNCOMPUTER Labs Inc.</title>
 
-    <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="FUNCOMPUTER Labs, inicio">
-        <img class="brand-logo" src="assets/fclogo-mark.png" alt="" width="32" height="32" />
-        <span>FUNCOMPUTER <b>LABS</b></span>
-      </a>
-      <button class="nav-toggle" aria-label="Abrir navegación" aria-expanded="false" aria-controls="nav-list"><span></span><span></span></button>
-      <nav aria-label="Principal">
-        <ul id="nav-list">
-          <li><a href="#laboratorios">Laboratorios</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#insights">Novedades</a></li>
-          <li><button class="account-button" type="button" data-login-open>INICIAR SESIÓN</button></li>
-          <li><a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a></li>
-        </ul>
-      </nav>
-    </header>
+  <link rel="icon" type="image/png" href="fclogo-mark.png" />
+  <link rel="apple-touch-icon" href="fclogo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-title">
-      <div class="login-panel">
-        <button class="login-close" type="button" aria-label="Cerrar" data-login-close>×</button>
-        <p class="eyebrow"><span></span> FUNCOMPUTER ACCOUNT</p>
-        <h2 id="login-title">Acceso al sistema.</h2>
-        <p>Inicia sesión con tu cuenta FUNCOMPUTER para entrar al ecosistema.</p>
-        <form class="login-form" id="login-form">
-          <label>EMAIL <input type="email" name="email" autocomplete="email" required /></label>
-          <label>CONTRASEÑA <input type="password" name="password" autocomplete="current-password" required /></label>
-          <button class="login-submit" type="submit">INICIAR SESIÓN ↗</button>
-          <p class="login-status" id="login-status" role="status"></p>
-        </form>
+  <style>
+    :root {
+      --bg: #05030d;
+      --bg-soft: #0b0720;
+      --panel: rgba(19, 12, 47, .72);
+      --text: #f4f0ff;
+      --muted: #bbb4d6;
+      --cyan: #35e7ff;
+      --purple: #9b67ff;
+      --acid: #e5ff3d;
+      --line: rgba(155, 103, 255, .32);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: Manrope, sans-serif;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .04;
+      z-index: 20;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .header {
+      height: 82px;
+      padding: 0 clamp(22px, 5vw, 82px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .brand b { color: var(--cyan); font-weight: 400; }
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      border-radius: 8px;
+      filter: drop-shadow(0 0 10px rgba(53, 231, 255, .75));
+    }
+
+    nav { display: flex; align-items: center; gap: 25px; }
+    nav a, .account-button {
+      color: var(--text);
+      font: 700 11px "DM Mono", monospace;
+      letter-spacing: .06em;
+    }
+
+    nav a:hover { color: var(--cyan); }
+
+    .account-button {
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 10px 13px;
+      cursor: pointer;
+    }
+
+    .account-button:hover,
+    .account-button.is-signed-in {
+      color: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    .section { padding-left: clamp(22px, 9vw, 175px); padding-right: clamp(22px, 9vw, 175px); }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding-top: 120px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 77% 30%, #31206d 0, transparent 31%),
+        radial-gradient(circle at 25% 80%, #003e54 0, transparent 28%),
+        linear-gradient(125deg, #05030d 15%, #0a0620 65%, #09052d);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .17;
+      background-image:
+        linear-gradient(rgba(53,231,255,.36) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(53,231,255,.36) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, #000, transparent 80%);
+    }
+
+    .hero-copy, .signal { position: relative; z-index: 1; }
+    .eyebrow {
+      margin: 0;
+      color: var(--muted);
+      font: 10px "DM Mono", monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow span {
+      display: inline-block;
+      width: 25px;
+      height: 1px;
+      margin-right: 8px;
+      vertical-align: middle;
+      background: var(--acid);
+    }
+
+    h1 {
+      max-width: 650px;
+      margin: 25px 0;
+      font-size: clamp(54px, 7vw, 112px);
+      letter-spacing: -.08em;
+      line-height: .92;
+    }
+
+    h1 em, h2 em { color: var(--cyan); font-family: Georgia, serif; font-weight: 400; }
+    .lede { max-width: 520px; color: var(--muted); line-height: 1.75; }
+
+    .buttons { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 18px;
+      font: 800 10px "DM Mono", monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .button-primary {
+      color: #05030d;
+      background: linear-gradient(105deg, var(--cyan), var(--purple));
+    }
+
+    .button-outline { border: 1px solid var(--line); }
+
+    .signal { min-height: 430px; }
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid rgba(53, 231, 255, .3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 22s linear infinite;
+    }
+
+    .orbit-one { width: 290px; height: 290px; }
+    .orbit-two {
+      width: 440px;
+      height: 180px;
+      border-color: rgba(229, 255, 61, .25);
+      transform: translate(-50%, -50%) rotate(-40deg);
+    }
+
+    .orbit-three {
+      width: 410px;
+      height: 410px;
+      border-style: dashed;
+      animation-direction: reverse;
+    }
+
+    .core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 130px;
+      height: 130px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle at 30% 30%, #52f2ff, #5532ba 48%, #130b35 74%);
+      box-shadow: 0 0 32px #35e7ff99, 0 0 96px #9b67ff55;
+    }
+
+    .core img {
+      width: 74%;
+      height: 74%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px rgba(53,231,255,.7));
+    }
+
+    .signal-tag {
+      position: absolute;
+      color: var(--muted);
+      font: 10px "DM Mono", monospace;
+      letter-spacing: .08em;
+    }
+
+    .signal-tag::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      margin-right: 7px;
+      border-radius: 50%;
+      background: var(--acid);
+      box-shadow: 0 0 9px var(--acid);
+    }
+
+    .tag-one { top: 18%; left: 0; }
+    .tag-two { right: 0; bottom: 20%; }
+    .tag-two::before { background: var(--cyan); box-shadow: 0 0 9px var(--cyan); }
+
+    .intro, .projects { padding-top: 130px; padding-bottom: 130px; }
+    .intro { background: #f4f0ff; color: #0a0620; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 55px; }
+    h2 { margin: 0 0 22px; font-size: clamp(40px, 5vw, 74px); letter-spacing: -.07em; line-height: .98; }
+    .intro p { max-width: 580px; line-height: 1.8; color: #4b4266; }
+
+    .projects { background: #08051a; }
+    .section-top { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 50px; }
+    .section-top h2 { margin-top: 20px; }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      min-height: 315px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(155,103,255,.15), transparent 58%), var(--panel);
+      transition: transform .25s, border-color .25s;
+    }
+
+    .project:hover { transform: translateY(-7px); border-color: var(--cyan); }
+    .project-cat3 { cursor: pointer; }
+    .project-cat3:focus { outline: 2px solid var(--cyan); outline-offset: 5px; }
+
+    .project-label {
+      color: var(--cyan);
+      font: 10px "DM Mono", monospace;
+      letter-spacing: .1em;
+    }
+
+    .project h3 { margin: 10px 0 0; font-size: 38px; letter-spacing: -.06em; }
+    .project p { margin: 0; color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: .08em; }
+    .project-arrow { color: var(--acid); font-size: 25px; align-self: end; }
+
+    .contact {
+      min-height: 500px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: #0d0830;
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      width: 670px;
+      height: 670px;
+      border: 1px solid rgba(53,231,255,.25);
+      border-radius: 50%;
+    }
+
+    .contact-content { position: relative; z-index: 1; padding: 40px 22px; }
+    .contact-options { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 25px; }
+
+    .contact-options a {
+      padding: 13px 16px;
+      border: 1px solid var(--line);
+      background: rgba(5,3,13,.3);
+      font: 700 11px "DM Mono", monospace;
+      letter-spacing: .06em;
+    }
+
+    .contact-options a:hover { color: var(--cyan); border-color: var(--cyan); }
+
+    footer {
+      padding: 42px clamp(22px, 5vw, 82px);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font: 10px "DM Mono", monospace;
+      border-top: 1px solid var(--line);
+    }
+
+    .login-dialog {
+      width: min(92vw, 420px);
+      padding: 0;
+      color: var(--text);
+      border: 1px solid rgba(53,231,255,.55);
+      background: #09051b;
+      box-shadow: 0 25px 90px #000b;
+    }
+
+    .login-dialog::backdrop { background: #03020acc; backdrop-filter: blur(7px); }
+    .login-panel { padding: 32px; position: relative; }
+    .login-panel h2 { margin-top: 12px; font-size: 36px; }
+    .login-close {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .login-form { display: grid; gap: 15px; margin-top: 24px; }
+    .login-form label { display: grid; gap: 7px; font: 10px "DM Mono", monospace; letter-spacing: .08em; }
+    .login-form input {
+      padding: 13px;
+      color: var(--text);
+      background: #100a2a;
+      border: 1px solid var(--line);
+    }
+
+    .login-submit {
+      padding: 14px;
+      border: 0;
+      color: #05030d;
+      font-weight: 800;
+      cursor: pointer;
+      background: linear-gradient(105deg, var(--cyan), var(--purple));
+    }
+
+    .login-status { min-height: 20px; margin: 0; color: var(--muted); font: 11px "DM Mono", monospace; }
+
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @media (max-width: 760px) {
+      .header { height: auto; padding-top: 20px; align-items: flex-start; }
+      nav { gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+      nav a:not(.account-button) { display: none; }
+      .hero { grid-template-columns: 1fr; padding-top: 145px; }
+      .signal { min-height: 330px; }
+      .orbit-three { width: 320px; height: 320px; }
+      .orbit-two { width: 330px; }
+      .intro-grid, .project-grid { grid-template-columns: 1fr; }
+      .intro, .projects { padding-top: 85px; padding-bottom: 85px; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="noise"></div>
+
+  <header class="header">
+    <a class="brand" href="#inicio">
+      <img class="brand-logo" src="fclogo-mark.png" alt="FUNCOMPUTER Labs" />
+      <span>FUNCOMPUTER <b>LABS</b></span>
+    </a>
+
+    <nav>
+      <a href="#proyectos">PROYECTOS</a>
+      <a href="#contacto">CONTACTO</a>
+      <button class="account-button" type="button" data-login-open>INICIAR SESIÓN</button>
+    </nav>
+  </header>
+
+  <dialog class="login-dialog" id="login-dialog">
+    <div class="login-panel">
+      <button class="login-close" type="button" data-login-close>×</button>
+      <p class="eyebrow"><span></span>FUNCOMPUTER ACCOUNT</p>
+      <h2>Acceso al sistema.</h2>
+
+      <form class="login-form" id="login-form">
+        <label>EMAIL
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <label>CONTRASEÑA
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+
+        <button class="login-submit" type="submit">INICIAR SESIÓN ↗</button>
+        <p class="login-status" id="login-status"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <main id="inicio">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span>FUNCOMPUTER LABS INC. / SYSTEMS ONLINE</p>
+        <h1>Construimos lo que <em>todavía</em> no existe.</h1>
+        <p class="lede">
+          Software, hardware, privacidad e inteligencia artificial para
+          explorar el futuro de la computación.
+        </p>
+
+        <div class="buttons">
+          <a class="button button-primary" href="#proyectos">EXPLORAR PROYECTOS ↘</a>
+          <a class="button button-outline" href="#contacto">CONTACTAR ↗</a>
+        </div>
       </div>
-    </dialog>
 
-    <main id="main">
-      <section class="hero section-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span></span> FUNCOMPUTER LABS INC. / EST. 1984</p>
-          <h1>Diseñamos lo que <em>todavía</em> no existe.</h1>
-          <p class="lede">Convertimos preguntas difíciles en tecnología útil: sistemas digitales, dispositivos inteligentes e investigación aplicada que merecen perdurar.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#laboratorios">Explorar los labs <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#proyectos">Ver proyectos <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <div class="signal-field reveal" aria-label="Visualización abstracta de señales y tecnología" role="img">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
-          <div class="core"><img src="assets/fclogo-mark.png" alt="Logo de FUNCOMPUTER Labs" /></div>
-          <div class="signal-tag tag-one"><i></i> SYSTEMS ONLINE</div>
-          <div class="signal-tag tag-two"><i></i> 04 LABS ACTIVE</div>
-          <div class="coordinate">41°23′N&nbsp;&nbsp;2°10′E</div>
-        </div>
-        <div class="hero-bottom reveal">
-          <p>Construimos en la intersección de curiosidad, rigor y posibilidad.</p>
-          <a href="#manifiesto" aria-label="Descubrir más"><span>SCROLL TO DISCOVER</span> <b>↓</b></a>
-        </div>
-      </section>
+      <div class="signal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
 
-      <section class="intro section-grid" id="manifiesto">
-        <p class="eyebrow reveal"><span></span> 01 / NUESTRA SEÑAL</p>
-        <div class="intro-text reveal">
+        <div class="core">
+          <img src="fclogo-mark.png" alt="Logo de FUNCOMPUTER Labs" />
+        </div>
+
+        <div class="signal-tag tag-one">SYSTEMS ONLINE</div>
+        <div class="signal-tag tag-two">04 PROJECTS ACTIVE</div>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div class="intro-grid">
+        <p class="eyebrow"><span></span>01 / MANIFIESTO</p>
+        <div>
           <h2>No seguimos la hoja de ruta.<br /><em>La escribimos.</em></h2>
-          <div><p>FUNCOMPUTER Labs es un estudio de investigación y desarrollo independiente. Reunimos ingenieros, diseñadores, científicos y pensadores para resolver problemas reales con una mirada poco convencional.</p><a class="text-link" href="#contacto">Conocer al equipo <span aria-hidden="true">↗</span></a></div>
+          <p>
+            FUNCOMPUTER Labs es un laboratorio tecnológico independiente.
+            Creamos sistemas, productos y experimentos alrededor de las ideas
+            que nos obsesionan.
+          </p>
         </div>
-        <div class="metrics reveal" aria-label="Datos de FUNCOMPUTER Labs">
-          <div><strong>40<span>+</span></strong><p>años explorando<br />lo posible</p></div>
-          <div><strong>04</strong><p>áreas de I+D<br />conectadas</p></div>
-          <div><strong>17</strong><p>proyectos vivos<br />en el laboratorio</p></div>
+      </div>
+    </section>
+
+    <section class="projects section" id="proyectos">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow"><span></span>02 / PROYECTOS</p>
+          <h2>Construido en el <em>lab.</em></h2>
         </div>
-      </section>
+      </div>
 
-      <section class="labs" id="laboratorios">
-        <div class="section-heading section-grid reveal"><p class="eyebrow"><span></span> 02 / ÁREAS DE TRABAJO</p><h2>Una misma ambición,<br /><em>cuatro perspectivas.</em></h2></div>
-        <div class="lab-list">
-          <article class="lab-card reveal"><div class="lab-index">01</div><div class="lab-icon code-icon">&lt;/&gt;</div><div><h3>Software</h3><p>Productos digitales, infraestructura y experiencias que convierten complejidad en claridad.</p></div><a href="#contacto" aria-label="Explorar laboratorio de Software">↗</a></article>
-          <article class="lab-card reveal"><div class="lab-index">02</div><div class="lab-icon hardware-icon"><i></i><i></i><i></i><i></i></div><div><h3>Hardware</h3><p>Objetos conectados y sistemas físicos diseñados para responder al mundo real.</p></div><a href="#contacto" aria-label="Explorar laboratorio de Hardware">↗</a></article>
-          <article class="lab-card reveal"><div class="lab-index">03</div><div class="lab-icon shield-icon">◇</div><div><h3>Privacidad &amp; ciberseguridad</h3><p>Tecnología confiable desde el origen, porque la confianza también se diseña.</p></div><a href="#contacto" aria-label="Explorar laboratorio de privacidad y ciberseguridad">↗</a></article>
-          <article class="lab-card reveal"><div class="lab-index">04</div><div class="lab-icon ai-icon">✦</div><div><h3>Inteligencia artificial</h3><p>Modelos centrados en las personas para amplificar criterio, no sustituirlo.</p></div><a href="#contacto" aria-label="Explorar laboratorio de inteligencia artificial">↗</a></article>
+      <div class="project-grid">
+        <article class="project">
+          <div>
+            <span class="project-label">01 — SISTEMA OPERATIVO</span>
+            <h3>FUNSYSTEM<br />OS</h3>
+          </div>
+          <p>EN DESARROLLO</p>
+        </article>
+
+        <article class="project">
+          <div>
+            <span class="project-label">02 — NAVEGADOR / PRIVACIDAD</span>
+            <h3>Funxplorer</h3>
+          </div>
+          <p>WEB EXPLORATION</p>
+        </article>
+
+        <article class="project">
+          <div>
+            <span class="project-label">03 — HARDWARE + SOFTWARE</span>
+            <h3>FUN Labs</h3>
+          </div>
+          <p>INVESTIGACIÓN Y DESARROLLO</p>
+        </article>
+
+        <article class="project project-cat3" data-url="https://cat3.lovable.app" role="link" tabindex="0">
+          <div>
+            <span class="project-label">04 — IA / PLATAFORMA</span>
+            <h3>CAT3</h3>
+          </div>
+          <a class="project-arrow" href="https://cat3.lovable.app" target="_blank" rel="noopener noreferrer">↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="contact-content">
+        <p class="eyebrow"><span></span>ABRIR CANAL DE COMUNICACIÓN</p>
+        <h2>¿Tienes una<br /><em>idea imposible?</em></h2>
+
+        <div class="contact-options">
+          <a href="mailto:alvarosanjuandominguez813@gmail.com">alvarosanjuandominguez813@gmail.com</a>
+          <a href="tel:+34681975731">+34 681 975 731</a>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="projects section-grid" id="proyectos">
-        <div class="projects-top reveal"><p class="eyebrow"><span></span> 03 / TRABAJO SELECCIONADO</p><a class="text-link" href="#contacto">Todos los proyectos <span aria-hidden="true">↗</span></a></div>
-        <div class="project-grid">
-          <article class="project project-feature reveal"><div class="project-image project-image-one"><div class="grid-sphere"></div><span>01 — FUNSYSTEM</span></div><div class="project-info"><div><p>SISTEMA OPERATIVO / EN DESARROLLO</p><h3>FUNSYSTEM<br />OS</h3></div><a href="#contacto" aria-label="Consultar FUNSYSTEM OS">↗</a></div></article>
-          <article class="project reveal"><div class="project-image project-image-two"><div class="wave"></div><span>02 — FUNXPLORER</span></div><div class="project-info"><div><p>NAVEGADOR / PRIVACIDAD</p><h3>Funxplorer</h3></div><a href="#contacto" aria-label="Consultar Funxplorer">↗</a></div></article>
-          <article class="project reveal"><div class="project-image project-image-three"><div class="chip"><i></i><i></i><i></i><i></i></div><span>03 — FUN LABS</span></div><div class="project-info"><div><p>HARDWARE + SOFTWARE / I+D</p><h3>FUN Labs</h3></div><a href="#contacto" aria-label="Consultar FUN Labs">↗</a></div></article>
-          <article class="project project-cat3 reveal" data-url="https://cat3.lovable.app" role="link" tabindex="0" aria-label="Abrir CAT3"><div class="project-image project-image-two"><div class="wave"></div><span>04 — CAT3</span></div><div class="project-info"><div><p>IA / PLATAFORMA</p><h3>CAT3</h3></div><a href="https://cat3.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="Abrir CAT3 en una pestaña nueva">↗</a></div></article>
-        </div>
-      </section>
+  <footer>
+    <span>© 2026 FUNCOMPUTER Labs Inc.</span>
+    <span>BUILT WITH CURIOSITY.</span>
+  </footer>
 
-      <section class="journal section-grid" id="insights">
-        <div class="journal-intro reveal"><p class="eyebrow"><span></span> 04 / DESDE EL LAB</p><h2>Pensar en<br /><em>voz alta.</em></h2><a class="button button-outline" href="#contacto">Ver todas las notas <span aria-hidden="true">↗</span></a></div>
-        <div class="journal-list reveal">
-          <a class="journal-item" href="#contacto"><p>RESEARCH NOTE <span>—</span> 08.06.25</p><h3>La tecnología silenciosa: diseñar para desaparecer.</h3><b>↗</b></a>
-          <a class="journal-item" href="#contacto"><p>FIELD LOG <span>—</span> 21.05.25</p><h3>Un año aprendiendo de los bordes de la red.</h3><b>↗</b></a>
-          <a class="journal-item" href="#contacto"><p>LAB NOTE <span>—</span> 02.04.25</p><h3>Por qué la IA necesita más contexto, no más datos.</h3><b>↗</b></a>
-        </div>
-      </section>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Pega aquí los datos públicos de tu proyecto Supabase.
+    // Nunca uses la clave service_role en una web.
+    const SUPABASE_URL = "";
+    const SUPABASE_ANON_KEY = "";
 
-      <section class="contact" id="contacto">
-        <div class="contact-glow" aria-hidden="true"></div>
-        <div class="contact-inner reveal"><p class="eyebrow"><span></span> ABRIR CANAL DE COMUNICACIÓN</p><h2>¿Tienes una<br /><em>idea imposible?</em></h2><a class="contact-link" href="mailto:alvarosanjuandominguez813@gmail.com">alvarosanjuandominguez813@gmail.com <span>↗</span></a><div class="contact-options"><a href="tel:+34681975731">+34 681 975 731</a><a href="mailto:alvarosanjuandominguez813@gmail.com?subject=Proyecto%20FUNCOMPUTER">ENVIAR UN MENSAJE</a></div></div>
-      </section>
-    </main>
+    const client = SUPABASE_URL && SUPABASE_ANON_KEY
+      ? supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+      : null;
 
-    <footer class="site-footer section-grid">
-      <a class="brand" href="#top"><img class="brand-logo" src="assets/fclogo-mark.png" alt="" width="32" height="32" /><span>FUNCOMPUTER <b>LABS</b></span></a>
-      <div class="footer-links"><a href="#laboratorios">Laboratorios</a><a href="#proyectos">Proyectos</a><a href="#insights">Novedades</a></div>
-      <div class="footer-meta"><p>© 2026 FUNCOMPUTER Labs Inc.<br />Built with curiosity.</p><p>Barcelona / Remote<br /><a href="mailto:alvarosanjuandominguez813@gmail.com">Contactar</a></p></div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase-config.js"></script>
-    <script src="script.js"></script>
-  </body>
+    const dialog = document.querySelector("#login-dialog");
+    const status = document.querySelector("#login-status");
+    const accountButton = document.querySelector("[data-login-open]");
+
+    accountButton.addEventListener("click", () => {
+      status.textContent = client
+        ? ""
+        : "Añade la URL y la clave pública de Supabase en el código.";
+      dialog.showModal();
+    });
+
+    document.querySelector("[data-login-close]").addEventListener("click", () => dialog.close());
+
+    document.querySelector("#login-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!client) {
+        status.textContent = "Falta configurar Supabase.";
+        return;
+      }
+
+      const form = new FormData(event.currentTarget);
+      status.textContent = "Conectando…";
+
+      const { error } = await client.auth.signInWithPassword({
+        email: form.get("email"),
+        password: form.get("password")
+      });
+
+      if (error) {
+        status.textContent = error.message;
+        return;
+      }
+
+      status.textContent = "Acceso concedido.";
+      accountButton.textContent = "CUENTA ACTIVA";
+      accountButton.classList.add("is-signed-in");
+
+      setTimeout(() => dialog.close(), 700);
+    });
+
+    document.querySelectorAll(".project-cat3").forEach((project) => {
+      const openCat3 = () => window.open(project.dataset.url, "_blank", "noopener,noreferrer");
+
+      project.addEventListener("click", (event) => {
+        if (!event.target.closest("a")) openCat3();
+      });
+
+      project.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openCat3();
+        }
+      });
+    });
+  </script>
+</body>
 </html>

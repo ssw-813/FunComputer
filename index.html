@@ -11,8 +11,8 @@
 
   <title>FUNCOMPUTER Labs Inc.</title>
 
-  <link rel="icon" type="image/png" href="/fclogo-mark.png" />
-  <link rel="apple-touch-icon" href="/fclogo-mark.png" />
+  <link rel="icon" type="image/png" href="fclogo-mark.png" />
+  <link rel="apple-touch-icon" href="fclogo-mark.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +23,7 @@
   />
 
   <style>
+
     :root {
       --bg: #05030d;
       --bg-soft: #0b0720;
@@ -56,8 +57,7 @@
       text-decoration: none;
     }
 
-    button,
-    input {
+    button {
       font: inherit;
     }
 
@@ -70,10 +70,6 @@
 
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
-
-    /* =========================
-       HEADER
-    ========================= */
 
     .header {
       height: 82px;
@@ -106,11 +102,15 @@
     .brand-logo {
       width: 34px;
       height: 34px;
+
       object-fit: contain;
       border-radius: 8px;
 
       filter:
-        drop-shadow(0 0 10px rgba(53, 231, 255, .75));
+        drop-shadow(
+          0 0 10px
+          rgba(53, 231, 255, .75)
+        );
     }
 
     nav {
@@ -122,7 +122,12 @@
     nav a,
     .account-button {
       color: var(--text);
-      font: 700 11px "DM Mono", monospace;
+
+      font:
+        700 11px
+        "DM Mono",
+        monospace;
+
       letter-spacing: .06em;
     }
 
@@ -133,8 +138,15 @@
     .account-button {
       border: 1px solid var(--line);
       background: transparent;
+
       padding: 10px 13px;
+
       cursor: pointer;
+
+      transition:
+        color .2s,
+        border-color .2s,
+        background .2s;
     }
 
     .account-button:hover,
@@ -143,41 +155,18 @@
       border-color: var(--cyan);
     }
 
-    /* =========================
-       GENERAL
-    ========================= */
+    .account-button.is-signed-in {
+      background: rgba(53, 231, 255, .06);
+    }
 
     .section {
       padding-left: clamp(22px, 9vw, 175px);
       padding-right: clamp(22px, 9vw, 175px);
     }
 
-    .eyebrow {
-      margin: 0;
-
-      color: var(--muted);
-
-      font: 10px "DM Mono", monospace;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow span {
-      display: inline-block;
-
-      width: 25px;
-      height: 1px;
-
-      margin-right: 8px;
-
-      vertical-align: middle;
-
-      background: var(--acid);
-    }
-
-    /* =========================
+    /* ================================
        HERO
-    ========================= */
+    ================================= */
 
     .hero {
       min-height: 100vh;
@@ -247,12 +236,43 @@
       z-index: 1;
     }
 
+    .eyebrow {
+      margin: 0;
+
+      color: var(--muted);
+
+      font:
+        10px
+        "DM Mono",
+        monospace;
+
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow span {
+      display: inline-block;
+
+      width: 25px;
+      height: 1px;
+
+      margin-right: 8px;
+
+      vertical-align: middle;
+
+      background: var(--acid);
+    }
+
     h1 {
       max-width: 650px;
 
       margin: 25px 0;
 
-      font-size: clamp(54px, 7vw, 112px);
+      font-size: clamp(
+        54px,
+        7vw,
+        112px
+      );
 
       letter-spacing: -.08em;
       line-height: .92;
@@ -285,12 +305,17 @@
 
     .button {
       display: inline-flex;
+
       align-items: center;
       gap: 12px;
 
       padding: 15px 18px;
 
-      font: 800 10px "DM Mono", monospace;
+      font:
+        800 10px
+        "DM Mono",
+        monospace;
+
       letter-spacing: .08em;
       text-transform: uppercase;
     }
@@ -310,9 +335,9 @@
       border: 1px solid var(--line);
     }
 
-    /* =========================
+    /* ================================
        SIGNAL
-    ========================= */
+    ================================= */
 
     .signal {
       min-height: 430px;
@@ -324,7 +349,8 @@
       top: 50%;
       left: 50%;
 
-      border: 1px solid rgba(53, 231, 255, .3);
+      border: 1px solid
+        rgba(53, 231, 255, .3);
 
       border-radius: 50%;
 
@@ -344,7 +370,8 @@
       width: 440px;
       height: 180px;
 
-      border-color: rgba(229, 255, 61, .25);
+      border-color:
+        rgba(229, 255, 61, .25);
 
       transform:
         translate(-50%, -50%)
@@ -398,7 +425,8 @@
 
       filter:
         drop-shadow(
-          0 0 12px rgba(53,231,255,.7)
+          0 0 12px
+          rgba(53,231,255,.7)
         );
     }
 
@@ -407,7 +435,11 @@
 
       color: var(--muted);
 
-      font: 10px "DM Mono", monospace;
+      font:
+        10px
+        "DM Mono",
+        monospace;
+
       letter-spacing: .08em;
     }
 
@@ -446,9 +478,9 @@
         0 0 9px var(--cyan);
     }
 
-    /* =========================
+    /* ================================
        INTRO
-    ========================= */
+    ================================= */
 
     .intro,
     .projects {
@@ -464,7 +496,8 @@
     .intro-grid {
       display: grid;
 
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns:
+        1fr 2fr;
 
       gap: 55px;
     }
@@ -472,7 +505,11 @@
     h2 {
       margin: 0 0 22px;
 
-      font-size: clamp(40px, 5vw, 74px);
+      font-size: clamp(
+        40px,
+        5vw,
+        74px
+      );
 
       letter-spacing: -.07em;
       line-height: .98;
@@ -486,9 +523,9 @@
       color: #4b4266;
     }
 
-    /* =========================
+    /* ================================
        PROJECTS
-    ========================= */
+    ================================= */
 
     .projects {
       background: #08051a;
@@ -513,7 +550,10 @@
       display: grid;
 
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
 
       gap: 25px;
     }
@@ -527,7 +567,8 @@
 
       padding: 26px;
 
-      border: 1px solid var(--line);
+      border:
+        1px solid var(--line);
 
       background:
         linear-gradient(
@@ -553,14 +594,19 @@
     }
 
     .project-cat3:focus {
-      outline: 2px solid var(--cyan);
+      outline:
+        2px solid var(--cyan);
+
       outline-offset: 5px;
     }
 
     .project-label {
       color: var(--cyan);
 
-      font: 10px "DM Mono", monospace;
+      font:
+        10px
+        "DM Mono",
+        monospace;
 
       letter-spacing: .1em;
     }
@@ -578,7 +624,10 @@
 
       color: var(--muted);
 
-      font: 10px "DM Mono", monospace;
+      font:
+        10px
+        "DM Mono",
+        monospace;
 
       letter-spacing: .08em;
     }
@@ -591,9 +640,9 @@
       align-self: end;
     }
 
-    /* =========================
+    /* ================================
        CONTACT
-    ========================= */
+    ================================= */
 
     .contact {
       min-height: 500px;
@@ -618,7 +667,8 @@
       height: 670px;
 
       border:
-        1px solid rgba(53,231,255,.25);
+        1px solid
+        rgba(53,231,255,.25);
 
       border-radius: 50%;
     }
@@ -651,7 +701,9 @@
         rgba(5,3,13,.3);
 
       font:
-        700 11px "DM Mono", monospace;
+        700 11px
+        "DM Mono",
+        monospace;
 
       letter-spacing: .06em;
     }
@@ -663,9 +715,9 @@
         var(--cyan);
     }
 
-    /* =========================
+    /* ================================
        FOOTER
-    ========================= */
+    ================================= */
 
     footer {
       padding:
@@ -681,15 +733,17 @@
       color: var(--muted);
 
       font:
-        10px "DM Mono", monospace;
+        10px
+        "DM Mono",
+        monospace;
 
       border-top:
         1px solid var(--line);
     }
 
-    /* =========================
-       LOGIN
-    ========================= */
+    /* ================================
+       LOGIN / REGISTER DIALOG
+    ================================= */
 
     .login-dialog {
       width: min(92vw, 420px);
@@ -699,7 +753,8 @@
       color: var(--text);
 
       border:
-        1px solid rgba(53,231,255,.55);
+        1px solid
+        rgba(53,231,255,.55);
 
       background: #09051b;
 
@@ -710,7 +765,8 @@
     .login-dialog::backdrop {
       background: #03020acc;
 
-      backdrop-filter: blur(7px);
+      backdrop-filter:
+        blur(7px);
     }
 
     .login-panel {
@@ -723,6 +779,14 @@
       margin-top: 12px;
 
       font-size: 36px;
+    }
+
+    .login-description {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.6;
     }
 
     .login-close {
@@ -756,7 +820,9 @@
       gap: 7px;
 
       font:
-        10px "DM Mono", monospace;
+        10px
+        "DM Mono",
+        monospace;
 
       letter-spacing: .08em;
     }
@@ -779,7 +845,8 @@
         var(--cyan);
 
       box-shadow:
-        0 0 0 2px rgba(53,231,255,.08);
+        0 0 0 2px
+        rgba(53,231,255,.08);
     }
 
     .login-submit {
@@ -801,6 +868,11 @@
         );
     }
 
+    .login-submit:disabled {
+      opacity: .6;
+      cursor: wait;
+    }
+
     .login-status {
       min-height: 20px;
 
@@ -809,12 +881,55 @@
       color: var(--muted);
 
       font:
-        11px "DM Mono", monospace;
+        11px
+        "DM Mono",
+        monospace;
+
+      line-height: 1.5;
     }
 
-    /* =========================
+    .auth-switch {
+      width: 100%;
+
+      margin-top: 15px;
+
+      padding: 12px;
+
+      border:
+        1px solid var(--line);
+
+      background: transparent;
+
+      color: var(--text);
+
+      cursor: pointer;
+
+      font:
+        700 10px
+        "DM Mono",
+        monospace;
+
+      letter-spacing: .06em;
+
+      transition:
+        color .2s,
+        border-color .2s,
+        background .2s;
+    }
+
+    .auth-switch:hover {
+      color: var(--cyan);
+
+      border-color:
+        var(--cyan);
+
+      background:
+        rgba(53,231,255,.04);
+    }
+
+    /* ================================
        ANIMATION
-    ========================= */
+    ================================= */
 
     @keyframes spin {
       to {
@@ -824,9 +939,9 @@
       }
     }
 
-    /* =========================
+    /* ================================
        MOBILE
-    ========================= */
+    ================================= */
 
     @media (max-width: 760px) {
 
@@ -883,7 +998,9 @@
       footer {
         flex-direction: column;
       }
+
     }
+
   </style>
 </head>
 
@@ -891,27 +1008,29 @@
 
   <div class="noise"></div>
 
-
-  <!-- =========================
+  <!-- ================================
        HEADER
-  ========================= -->
+  ================================= -->
 
   <header class="header">
 
-    <a class="brand" href="#inicio">
+    <a
+      class="brand"
+      href="#inicio"
+    >
 
       <img
         class="brand-logo"
-        src="/fclogo-mark.png"
+        src="fclogo-mark.png"
         alt="FUNCOMPUTER Labs"
       />
 
       <span>
-        FUNCOMPUTER <b>LABS</b>
+        FUNCOMPUTER
+        <b>LABS</b>
       </span>
 
     </a>
-
 
     <nav>
 
@@ -936,9 +1055,9 @@
   </header>
 
 
-  <!-- =========================
-       LOGIN DIALOG
-  ========================= -->
+  <!-- ================================
+       LOGIN / REGISTER
+  ================================= -->
 
   <dialog
     class="login-dialog"
@@ -956,16 +1075,21 @@
         ×
       </button>
 
-
       <p class="eyebrow">
         <span></span>
         FUNCOMPUTER ACCOUNT
       </p>
 
-
-      <h2>
+      <h2 id="auth-title">
         Acceso al sistema.
       </h2>
+
+      <p
+        class="login-description"
+        id="auth-description"
+      >
+        Inicia sesión con tu FUNCOMPUTER Account.
+      </p>
 
 
       <form
@@ -993,6 +1117,7 @@
             type="password"
             name="password"
             autocomplete="current-password"
+            minlength="6"
             required
           />
 
@@ -1002,6 +1127,7 @@
         <button
           class="login-submit"
           type="submit"
+          id="auth-submit"
         >
           INICIAR SESIÓN ↗
         </button>
@@ -1014,14 +1140,24 @@
 
       </form>
 
+
+      <button
+        class="auth-switch"
+        type="button"
+        id="auth-switch"
+      >
+        ¿NO TIENES CUENTA?
+        CREAR FUNCOMPUTER ACCOUNT
+      </button>
+
     </div>
 
   </dialog>
 
 
-  <!-- =========================
+  <!-- ================================
        MAIN
-  ========================= -->
+  ================================= -->
 
   <main id="inicio">
 
@@ -1034,9 +1170,9 @@
 
         <p class="eyebrow">
           <span></span>
-          FUNCOMPUTER LABS INC. / SYSTEMS ONLINE
+          FUNCOMPUTER LABS INC. /
+          SYSTEMS ONLINE
         </p>
-
 
         <h1>
           Construimos lo que
@@ -1044,12 +1180,10 @@
           no existe.
         </h1>
 
-
         <p class="lede">
-          Software, hardware, privacidad e inteligencia artificial
-          para explorar el futuro de la computación.
+          Software, hardware, privacidad e inteligencia
+          artificial para explorar el futuro de la computación.
         </p>
-
 
         <div class="buttons">
 
@@ -1059,7 +1193,6 @@
           >
             EXPLORAR PROYECTOS ↘
           </a>
-
 
           <a
             class="button button-outline"
@@ -1085,7 +1218,7 @@
         <div class="core">
 
           <img
-            src="/fclogo-mark.png"
+            src="fclogo-mark.png"
             alt="Logo de FUNCOMPUTER Labs"
           />
 
@@ -1096,7 +1229,6 @@
           SYSTEMS ONLINE
         </div>
 
-
         <div class="signal-tag tag-two">
           04 PROJECTS ACTIVE
         </div>
@@ -1106,7 +1238,7 @@
     </section>
 
 
-    <!-- INTRO -->
+    <!-- MANIFIESTO -->
 
     <section class="intro section">
 
@@ -1117,7 +1249,6 @@
           01 / MANIFIESTO
         </p>
 
-
         <div>
 
           <h2>
@@ -1125,7 +1256,6 @@
             <br />
             <em>La escribimos.</em>
           </h2>
-
 
           <p>
             FUNCOMPUTER Labs es un laboratorio tecnológico
@@ -1140,7 +1270,7 @@
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- PROYECTOS -->
 
     <section
       class="projects section"
@@ -1155,7 +1285,6 @@
             <span></span>
             02 / PROYECTOS
           </p>
-
 
           <h2>
             Construido en el
@@ -1180,7 +1309,6 @@
               01 — SISTEMA OPERATIVO
             </span>
 
-
             <h3>
               FUNSYSTEM
               <br />
@@ -1188,7 +1316,6 @@
             </h3>
 
           </div>
-
 
           <p>
             EN DESARROLLO
@@ -1207,13 +1334,11 @@
               02 — NAVEGADOR / PRIVACIDAD
             </span>
 
-
             <h3>
               Funxplorer
             </h3>
 
           </div>
-
 
           <p>
             WEB EXPLORATION
@@ -1232,13 +1357,11 @@
               03 — HARDWARE + SOFTWARE
             </span>
 
-
             <h3>
               FUN Labs
             </h3>
 
           </div>
-
 
           <p>
             INVESTIGACIÓN Y DESARROLLO
@@ -1262,13 +1385,11 @@
               04 — IA / PLATAFORMA
             </span>
 
-
             <h3>
               CAT3
             </h3>
 
           </div>
-
 
           <a
             class="project-arrow"
@@ -1288,7 +1409,7 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- CONTACTO -->
 
     <section
       class="contact"
@@ -1301,7 +1422,6 @@
           <span></span>
           ABRIR CANAL DE COMUNICACIÓN
         </p>
-
 
         <h2>
           ¿Tienes una
@@ -1318,8 +1438,9 @@
             alvarosanjuandominguez813@gmail.com
           </a>
 
-
-          <a href="tel:+34681975731">
+          <a
+            href="tel:+34681975731"
+          >
             +34 681 975 731
           </a>
 
@@ -1332,9 +1453,9 @@
   </main>
 
 
-  <!-- =========================
+  <!-- ================================
        FOOTER
-  ========================= -->
+  ================================= -->
 
   <footer>
 
@@ -1349,221 +1470,213 @@
   </footer>
 
 
-  <!-- =========================
+  <!-- ================================
        SUPABASE
-  ========================= -->
+  ================================= -->
 
-  <!-- Supabase JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-
-  <!--
-    TU CONFIGURACIÓN PÚBLICA DE SUPABASE
-
-    Este archivo debe existir en:
-
-    /supabase-config.js
-
-    NO pongas service_role ni sb_secret aquí.
-  -->
-
-  <script src="/supabase-config.js"></script>
-
-
-  <!-- =========================
-       FUNCOMPUTER JAVASCRIPT
-  ========================= -->
 
   <script>
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /*
+     * FUNCOMPUTER ACCOUNT
+     *
+     * Solo claves públicas.
+     * NUNCA colocar aquí service_role.
+     */
 
-    const navToggle =
-      document.querySelector('.nav-toggle');
+    const FUNCOMPUTER_SUPABASE = {
 
-    const nav =
-      document.querySelector('#nav-list');
+      url:
+        "https://uczomhfuxnvmgccyyztv.supabase.co",
 
+      anonKey:
+        "sb_publishable_69KGYPKAumUabW2y9CI0yw_yyTCqPSg"
 
-    navToggle?.addEventListener(
-      'click',
-      () => {
-
-        const isOpen =
-          nav.classList.toggle('open');
-
-        navToggle.setAttribute(
-          'aria-expanded',
-          String(isOpen)
-        );
-
-        navToggle.setAttribute(
-          'aria-label',
-          isOpen
-            ? 'Cerrar navegación'
-            : 'Abrir navegación'
-        );
-
-      }
-    );
+    };
 
 
-    nav?.querySelectorAll('a')
-      .forEach((link) => {
-
-        link.addEventListener(
-          'click',
-          () => {
-
-            nav.classList.remove('open');
-
-            navToggle?.setAttribute(
-              'aria-expanded',
-              'false'
-            );
-
-          }
-        );
-
-      });
-
-
-    /* =========================
-       SUPABASE CONFIG
-    ========================= */
-
-    const loginDialog =
-      document.querySelector('#login-dialog');
-
-    const loginForm =
-      document.querySelector('#login-form');
-
-    const loginStatus =
-      document.querySelector('#login-status');
-
-    const accountButtons =
-      document.querySelectorAll(
-        '[data-login-open]'
-      );
-
-    const closeLoginButton =
-      document.querySelector(
-        '[data-login-close]'
-      );
-
-
-    const settings =
-      window.FUNCOMPUTER_SUPABASE || {};
-
+    /* ================================
+       SUPABASE CLIENT
+    ================================= */
 
     let supabaseClient = null;
 
 
-    /* =========================
-       CREATE SUPABASE CLIENT
-    ========================= */
+    try {
 
-    if (
-      settings.url &&
-      settings.anonKey &&
-      window.supabase &&
-      typeof window.supabase.createClient === 'function'
-    ) {
-
-      try {
+      if (
+        window.supabase &&
+        FUNCOMPUTER_SUPABASE.url &&
+        FUNCOMPUTER_SUPABASE.anonKey
+      ) {
 
         supabaseClient =
           window.supabase.createClient(
-            settings.url,
-            settings.anonKey
+
+            FUNCOMPUTER_SUPABASE.url,
+
+            FUNCOMPUTER_SUPABASE.anonKey
+
           );
 
-
         console.log(
-          '✅ FUNCOMPUTER ID: Supabase conectado'
-        );
-
-      } catch (error) {
-
-        console.error(
-          '❌ FUNCOMPUTER ID: error creando Supabase',
-          error
+          "✅ FUNCOMPUTER ACCOUNT ONLINE"
         );
 
       }
 
-    } else {
+    } catch (error) {
 
       console.error(
-        '❌ FUNCOMPUTER ID: Supabase no está configurado.'
-      );
-
-      console.log(
-        'Configuración:',
-        window.FUNCOMPUTER_SUPABASE
-      );
-
-      console.log(
-        'Supabase JS:',
-        window.supabase
+        "❌ Error inicializando Supabase:",
+        error
       );
 
     }
 
 
-    /* =========================
-       ACCOUNT STATE
-    ========================= */
+    /* ================================
+       ELEMENTOS
+    ================================= */
 
-    const setAccountState =
-      (session) => {
+    const loginDialog =
+      document.querySelector(
+        "#login-dialog"
+      );
 
-        accountButtons.forEach(
-          (button) => {
+    const loginForm =
+      document.querySelector(
+        "#login-form"
+      );
 
-            button.textContent =
-              session
-                ? 'CUENTA ACTIVA'
-                : 'INICIAR SESIÓN';
+    const loginStatus =
+      document.querySelector(
+        "#login-status"
+      );
+
+    const accountButtons =
+      document.querySelectorAll(
+        "[data-login-open]"
+      );
+
+    const closeLoginButton =
+      document.querySelector(
+        "[data-login-close]"
+      );
+
+    const authSwitch =
+      document.querySelector(
+        "#auth-switch"
+      );
+
+    const authTitle =
+      document.querySelector(
+        "#auth-title"
+      );
+
+    const authDescription =
+      document.querySelector(
+        "#auth-description"
+      );
+
+    const authSubmit =
+      document.querySelector(
+        "#auth-submit"
+      );
 
 
-            button.classList.toggle(
-              'is-signed-in',
-              Boolean(session)
-            );
+    /* ================================
+       MODO
+    ================================= */
 
-          }
-        );
-
-      };
+    let registerMode = false;
 
 
-    /* =========================
-       OPEN LOGIN
-    ========================= */
+    function updateAuthUI() {
+
+      if (registerMode) {
+
+        authTitle.textContent =
+          "Crea tu cuenta.";
+
+        authDescription.textContent =
+          "Crea tu FUNCOMPUTER Account y forma parte del ecosistema FUNCOMPUTER Labs.";
+
+        authSubmit.textContent =
+          "CREAR CUENTA ↗";
+
+        authSwitch.textContent =
+          "¿YA TIENES CUENTA? INICIAR SESIÓN";
+
+      } else {
+
+        authTitle.textContent =
+          "Acceso al sistema.";
+
+        authDescription.textContent =
+          "Inicia sesión con tu FUNCOMPUTER Account.";
+
+        authSubmit.textContent =
+          "INICIAR SESIÓN ↗";
+
+        authSwitch.textContent =
+          "¿NO TIENES CUENTA? CREAR FUNCOMPUTER ACCOUNT";
+
+      }
+
+      loginStatus.textContent = "";
+
+    }
+
+
+    /* ================================
+       ESTADO DE CUENTA
+    ================================= */
+
+    function setAccountState(session) {
+
+      accountButtons.forEach(
+        (button) => {
+
+          button.textContent =
+            session
+              ? "CUENTA ACTIVA"
+              : "INICIAR SESIÓN";
+
+          button.classList.toggle(
+            "is-signed-in",
+            Boolean(session)
+          );
+
+        }
+      );
+
+    }
+
+
+    /* ================================
+       ABRIR LOGIN
+    ================================= */
 
     accountButtons.forEach(
       (button) => {
 
         button.addEventListener(
-          'click',
+          "click",
           () => {
+
+            registerMode = false;
+
+            updateAuthUI();
 
             if (!supabaseClient) {
 
               loginStatus.textContent =
-                'Falta configurar Supabase.';
-
-            } else {
-
-              loginStatus.textContent = '';
+                "FUNCOMPUTER Account no está disponible.";
 
             }
-
 
             loginDialog?.showModal();
 
@@ -1574,22 +1687,43 @@
     );
 
 
-    /* =========================
-       CLOSE LOGIN
-    ========================= */
+    /* ================================
+       CERRAR
+    ================================= */
 
     closeLoginButton?.addEventListener(
-      'click',
-      () => loginDialog?.close()
+      "click",
+      () => {
+
+        loginDialog?.close();
+
+      }
     );
 
 
-    /* =========================
-       LOGIN
-    ========================= */
+    /* ================================
+       CAMBIAR LOGIN / REGISTRO
+    ================================= */
+
+    authSwitch?.addEventListener(
+      "click",
+      () => {
+
+        registerMode =
+          !registerMode;
+
+        updateAuthUI();
+
+      }
+    );
+
+
+    /* ================================
+       FORMULARIO
+    ================================= */
 
     loginForm?.addEventListener(
-      'submit',
+      "submit",
       async (event) => {
 
         event.preventDefault();
@@ -1598,42 +1732,178 @@
         if (!supabaseClient) {
 
           loginStatus.textContent =
-            'Faltan la URL y la clave pública de Supabase.';
+            "Supabase no está configurado.";
 
           return;
 
         }
 
 
-        const data =
-          new FormData(loginForm);
+        const form =
+          new FormData(
+            event.currentTarget
+          );
 
 
         const email =
-          data.get('email');
+          String(
+            form.get("email") || ""
+          ).trim();
+
 
         const password =
-          data.get('password');
+          String(
+            form.get("password") || ""
+          );
 
 
         if (!email || !password) {
 
           loginStatus.textContent =
-            'Introduce tu correo y contraseña.';
+            "Introduce email y contraseña.";
 
           return;
 
         }
 
 
+        /* ============================
+           REGISTRO
+        ============================ */
+
+        if (registerMode) {
+
+          if (password.length < 6) {
+
+            loginStatus.textContent =
+              "La contraseña debe tener al menos 6 caracteres.";
+
+            return;
+
+          }
+
+
+          loginStatus.textContent =
+            "Creando FUNCOMPUTER Account…";
+
+          authSubmit.disabled = true;
+
+
+          try {
+
+            const {
+              data,
+              error
+            } =
+              await supabaseClient.auth.signUp({
+
+                email,
+                password
+
+              });
+
+
+            if (error) {
+
+              console.error(
+                "❌ Error de registro:",
+                error
+              );
+
+              loginStatus.textContent =
+                error.message;
+
+              return;
+
+            }
+
+
+            console.log(
+              "✅ Usuario creado:",
+              data.user
+            );
+
+
+            /*
+             * Si Supabase tiene activada
+             * la confirmación de email,
+             * habrá usuario pero todavía
+             * no habrá sesión.
+             */
+
+            if (
+              data.user &&
+              !data.session
+            ) {
+
+              loginStatus.textContent =
+                "✅ Cuenta creada. Revisa tu email para confirmar la cuenta.";
+
+              loginForm.reset();
+
+              return;
+
+            }
+
+
+            loginStatus.textContent =
+              "🎉 ¡FUNCOMPUTER Account creada!";
+
+
+            loginForm.reset();
+
+
+            setAccountState(
+              data.session
+            );
+
+
+            setTimeout(
+              () => {
+
+                loginDialog?.close();
+
+              },
+              1200
+            );
+
+
+          } catch (error) {
+
+            console.error(
+              error
+            );
+
+            loginStatus.textContent =
+              "Error creando la cuenta.";
+
+          } finally {
+
+            authSubmit.disabled =
+              false;
+
+          }
+
+
+          return;
+
+        }
+
+
+        /* ============================
+           LOGIN
+        ============================ */
+
         loginStatus.textContent =
-          'Conectando con FUNCOMPUTER ID…';
+          "Conectando con FUNCOMPUTER ID…";
+
+        authSubmit.disabled = true;
 
 
         try {
 
           const {
-            data: authData,
+            data,
             error
           } =
             await supabaseClient.auth
@@ -1648,10 +1918,9 @@
           if (error) {
 
             console.error(
-              '❌ FUNCOMPUTER ID:',
+              "❌ Error de login:",
               error
             );
-
 
             loginStatus.textContent =
               error.message;
@@ -1662,17 +1931,17 @@
 
 
           console.log(
-            '✅ FUNCOMPUTER ID:',
-            authData.user
+            "✅ Sesión FUNCOMPUTER activa:",
+            data.user
           );
 
 
           loginStatus.textContent =
-            'Acceso concedido.';
+            "✅ Acceso concedido.";
 
 
           setAccountState(
-            authData.session
+            data.session
           );
 
 
@@ -1680,21 +1949,28 @@
 
 
           setTimeout(
-            () => loginDialog?.close(),
-            700
+            () => {
+
+              loginDialog?.close();
+
+            },
+            800
           );
 
 
         } catch (error) {
 
           console.error(
-            '❌ Error inesperado:',
             error
           );
 
-
           loginStatus.textContent =
-            'Error conectando con FUNCOMPUTER ID.';
+            "Error conectando con FUNCOMPUTER Account.";
+
+        } finally {
+
+          authSubmit.disabled =
+            false;
 
         }
 
@@ -1702,44 +1978,28 @@
     );
 
 
-    /* =========================
-       EXISTING SESSION
-    ========================= */
+    /* ================================
+       SESIÓN EXISTENTE
+    ================================= */
 
     if (supabaseClient) {
 
       supabaseClient.auth
         .getSession()
-        .then(({ data }) => {
+        .then(
+          ({ data }) => {
 
-          setAccountState(
-            data.session
-          );
+            setAccountState(
+              data.session
+            );
 
-        })
-        .catch((error) => {
+          }
+        );
 
-          console.error(
-            '❌ Error obteniendo sesión:',
-            error
-          );
-
-        });
-
-
-      /* =========================
-         AUTH STATE CHANGES
-      ========================= */
 
       supabaseClient.auth
         .onAuthStateChange(
           (_event, session) => {
-
-            console.log(
-              'FUNCOMPUTER ID:',
-              _event
-            );
-
 
             setAccountState(
               session
@@ -1751,84 +2011,80 @@
     }
 
 
-    /* =========================
+    /* ================================
        CAT3
-    ========================= */
+    ================================= */
 
     document
-      .querySelectorAll('.project-cat3')
-      .forEach((project) => {
+      .querySelectorAll(
+        ".project-cat3"
+      )
+      .forEach(
+        (project) => {
 
-        const openCat3 =
-          () => {
+          const openCat3 =
+            () => {
 
-            window.open(
-              project.dataset.url,
-              '_blank',
-              'noopener,noreferrer'
-            );
+              window.open(
 
-          };
+                project.dataset.url,
 
+                "_blank",
 
-        project.addEventListener(
-          'click',
-          (event) => {
+                "noopener,noreferrer"
 
-            if (
-              !event.target.closest('a')
-            ) {
+              );
 
-              openCat3();
-
-            }
-
-          }
-        );
+            };
 
 
-        project.addEventListener(
-          'keydown',
-          (event) => {
+          project.addEventListener(
+            "click",
+            (event) => {
 
-            if (
-              event.key === 'Enter' ||
-              event.key === ' '
-            ) {
+              if (
+                !event.target.closest("a")
+              ) {
 
-              event.preventDefault();
+                openCat3();
 
-              openCat3();
+              }
 
             }
-
-          }
-        );
-
-      });
+          );
 
 
-    /* =========================
+          project.addEventListener(
+            "keydown",
+            (event) => {
+
+              if (
+                event.key === "Enter" ||
+                event.key === " "
+              ) {
+
+                event.preventDefault();
+
+                openCat3();
+
+              }
+
+            }
+          );
+
+        }
+      );
+
+
+    /* ================================
        DEBUG
-    ========================= */
+    ================================= */
 
     console.log(
-      'FUNCOMPUTER SUPABASE CONFIG:',
-      window.FUNCOMPUTER_SUPABASE
-    );
-
-
-    console.log(
-      'FUNCOMPUTER SUPABASE CLIENT:',
+      "FUNCOMPUTER SUPABASE:",
       supabaseClient
-    );
-
-
-    console.log(
-      'FUNCOMPUTER ID STATUS:',
-      supabaseClient
-        ? 'ONLINE'
-        : 'OFFLINE'
+        ? "ONLINE"
+        : "OFFLINE"
     );
 
   </script>
